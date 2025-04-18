@@ -2,7 +2,7 @@
 
 /*
 	- License: GNU GENERAL PUBLIC LICENSE v3.0
-	- Author: https://github.com/DontCallMeLuca
+	- Author: https://github.com/Arty3
 	- Requires: C++20 or above, requires Windows 10 or above
 */
 

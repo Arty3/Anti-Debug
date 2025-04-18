@@ -12,7 +12,7 @@ The aggressive countermeasures, such as the BSOD reaction, demonstrate the serio
 
 This library is based off of my other security focused library,
 <br>
-please refer to it for more details: [Stack-Obfuscator](https://github.com/DontCallMeLuca/Stack-Obfuscator)
+please refer to it for more details: [Stack-Obfuscator](https://github.com/Arty3/Stack-Obfuscator)
 
 ## ✨ Features
 - **Hardware Breakpoint Detection**
