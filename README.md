@@ -1,18 +1,17 @@
 <h1 align="center">✨ Anti Debugging ✨</h1>
 
-<h6 align="center"><em>Effective anti-analysis header for Windows</em></h6>
+<h6 align="center"><em>Anti-analysis header for Windows</em></h6>
 
 ## 📝 Overview
 
 [AntiDebug.hpp](./include/AntiDebug.hpp) is a header-only C++ library that helps protect your program from reverse engineering. It works by implementing a series of checks and prevention techniques to detect and prevent analysis tools.
 
-The library implements a comprehensive set of techniques that target different aspects of the debugging process. By combining multiple detection methods, it creates a robust defense against reverse engineering attempts. Each method exploits specific characteristics of debugging environments, from hardware behavior to operating system structures and timing anomalies.
-
-The aggressive countermeasures, such as the BSOD reaction, demonstrate the seriousness of the anti-debugging intent. While no single method is foolproof, the combination of multiple techniques significantly raises the bar for successful analysis, requiring debugger modifications, kernel-level interventions, or specialized tools to bypass.
-
 This library is based off of my other security focused library,
 <br>
 please refer to it for more details: [Stack-Obfuscator](https://github.com/Arty3/Stack-Obfuscator)
+
+> [!WARNING]
+> This project is primarily for my own learning, the tactics it uses are VERY well known and not too effective nowadays
 
 ## ✨ Features
 - **Hardware Breakpoint Detection**
@@ -27,13 +26,10 @@ please refer to it for more details: [Stack-Obfuscator](https://github.com/Arty3
 - **Memory Dump Prevention**
 - **Anti-Dumping Detection**
 - **Blue Screen (BSOD) Reaction**
-- **Code Obfuscation**
+- **Stack Obfuscation**
 - **Debug Port Detection**
 - **Window Title Randomization**
 - **Low performance overhead**
-- **No external dependencies**
-- **Modern C++ design**
-- **Thoroughly tested**
 
 ## 🛠 Requirements
 - MSVC Compiler
@@ -122,12 +118,6 @@ int main(void)
 }
 ```
 
-### ⭐ Best Practices
-
-- Combine it with further security solutions
-- Run all checks at the start of your program
-- Use the bluescreen function if a debugger is present, or at the very least `__fastfail(1)`
-
 ## 🧪 Proof of Concept
 
 Using the following code example:
@@ -156,16 +146,7 @@ Running it on a basic debugger:
 
 Running it with x64dbg (a reverse engineering focused debugger), the debugger fails to attach.
 
-## ⚠ Limitations
-
-- Weak hypervisor detection
-- No C support (for now)
-- Not foolproof, no solution ever is
-- Only for Windows x64 and the MSVC compiler
-
-## 🔧 Technical Design & Implementation Details
-
-###### _Warning: Only pain and suffering ahead_
+## 🔧 Technical Design & Learning
 
 ### Hardware Breakpoint Detection
 
